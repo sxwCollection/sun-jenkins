@@ -4,7 +4,7 @@ pipeline {
 
     stage ('info'){
       steps {
-      echo "---------------------------start info ---------------"
+      echo "---------------------------start build ---------------"
       sh 'mvn -Pnative spring-boot:build-image -Dimage.name=myimage:0.0.1'
       echo "---------------------------end info"}
     }
