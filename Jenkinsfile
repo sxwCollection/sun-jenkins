@@ -19,8 +19,8 @@ pipeline {
     stage ('push image to docker hub'){
       steps {
 	script {
-		docker.withRegistry('https://registry.hub.docker.com/sxwdocker/sxwrepo01', dockerCredentials) {
-			docker.image('sxwrepo01:0.0.2').push()
+		docker.withRegistry('https://registry.hub.docker.com/sxwdocker', dockerCredentials) {
+			docker.image('sxwrepo01').push('0.0.2')
 		}
       	}
       }
