@@ -24,3 +24,12 @@ docker:dind --storage-driver overlay2
 
 docker start jenkins-blueocean, docker start jenkins-docker
 docker stop jenkins-blueocean, docker stop jenkins-docker
+
+## setup maven
+add maven in Manage Jenkins/ Tools like:  
+![/img/maven.png]  
+to use the maven in Jenkinsfile:  
+pipeline {  
+    tools {  
+        maven '3.9.6'  
+    }  
