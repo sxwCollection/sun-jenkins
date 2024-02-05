@@ -48,5 +48,18 @@ ExecStart=/usr/bin/dockerd -H=fd:// -H=tcp://0.0.0.0:4243
 
 1. add docker access token in Dockerhub user/account settings/security/new access token  
 2. add a global credentials in manage jenkins/credentials/system/ global credentials, like  
-3. , it could also be project scoped, 
+![dockerhub](/img/dockersetup.png)
+, it could also be project scoped.  
+the password is the dockerhub access token, the ID is used in Jenkins to reference this credential.  
+Use it in Jenkinsfile like:  
+pipeline {  
+    environment {
+        DOCKERHUB_CREDENTIALS= credentials('sun-docker-hub') 
+    }
 
+## build project, OCI image and push docker repo
+this is shown in the Jenkinsfile.  
+to build an OCI image, there are many ways:  
+1. docker build  
+2. use maven plugin jib-maven-plugin  
+3. to build a native image use maven plugin native-maven-plugin and spring-boot-maven-plugin.  
