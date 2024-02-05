@@ -1,4 +1,3 @@
-# sun-jenkis
 # what
 in this demo it is shown:  
 1. how to install Jenkins  
@@ -58,7 +57,8 @@ pipeline {
     }
 
 ## build project, OCI image and push docker repo
-this is shown in the Jenkinsfile.  
+this is shown in the Jenkinsfile and a multi-branch pipeline should be created in Jenkins like:  
+![multibranch-pipeline](/img/pipeline.png)
 to build an OCI image, there are many ways:  
 1. docker build  
 2. use maven plugin jib-maven-plugin  
