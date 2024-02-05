@@ -32,4 +32,11 @@ to use the maven in Jenkinsfile:
 pipeline {  
     tools {  
         maven '3.9.6'  
-    }  
+    }   
+
+## docker agent 
+there two ways to connect Jenkins with docker:  
+1. share the docker.sock  
+2. dind with jenkins agent running, if Jenkins is installed with dind way, it is all set up.  
+
+
