@@ -36,7 +36,13 @@ pipeline {
 
 ## docker agent 
 there two ways to connect Jenkins with docker:  
-1. share the docker.sock  
-2. dind with jenkins agent running, if Jenkins is installed with dind way, it is all set up.  
+1. share the docker.sock
+2. setup:
+enable docker remote API
+vim /lib/systemd/system/docker.service
+set:
+ExecStart=/usr/bin/dockerd -H=fd:// -H=tcp://0.0.0.0:4243   
+
+3. dind with jenkins agent running, if Jenkins is installed with dind way, it is all set up.  
 
 
