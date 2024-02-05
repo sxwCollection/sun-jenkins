@@ -27,7 +27,7 @@ docker stop jenkins-blueocean, docker stop jenkins-docker
 
 ## setup maven
 add maven in Manage Jenkins/ Tools like:  
-![/img/maven.png]  
+![maven](/img/maven.png)  
 to use the maven in Jenkinsfile:  
 pipeline {  
     tools {  
